@@ -7,4 +7,70 @@
 
     </data>
 
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="給与補足（任意）"-->
+<!--                android:layout_marginStart="16dp"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:layout_marginBottom="12dp" />-->
+
+<!--            <EditText-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:layout_marginEnd="16dp"-->
+<!--                android:layout_marginBottom="12dp"-->
+<!--                android:hint="aaaaaa"-->
+<!--                android:gravity="start"-->
+<!--                android:inputType="text"-->
+<!--                android:maxLength="100"-->
+<!--                android:maxLines="10" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.helper.widget.Flow
+                    android:id="@+id/flow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    app:constraint_referenced_ids="textView, editText" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="給与補足（任意）"
+                    />
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:hint="aaaaaa"
+                    android:inputType="textMultiLine"
+                    android:maxLength="100"
+                    android:maxLines="10"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/flow"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
 </layout>
